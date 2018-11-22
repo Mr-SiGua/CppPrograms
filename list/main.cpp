@@ -2,6 +2,15 @@
 #include <list>
 using namespace std;
 
+enum process{
+	slink = 0,
+	llink,
+	kalink,
+	shotmessage
+};
+
+process linkType;
+
 int main() {
 	list<char> coll;                    // list container for character elements
 	
@@ -16,6 +25,25 @@ int main() {
 		cout << elem << ' ';
 	}
 	cout << endl;
+	
+	// - iterate over all elements
+	list<char>::const_iterator pos;
+	for (pos = coll.begin(); pos != coll.end(); pos++) {
+		cout << *pos << ' ';
+	}
+	cout << endl;
+	
+	switch (linkType)
+	{
+		case slink:
+			break;
+		case llink:
+			break;
+		case kalink:
+			break;
+		case shotmessage:
+			break;
+	}
 	
 	std::cout << "Hello, World!" << std::endl;
 	return 0;
